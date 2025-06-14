@@ -1,12 +1,32 @@
+
+@media(max-width: 430px){
+p
+{
+    font-size: 14px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+div.container
+{
+    display: grid; grid-template-columns: 80% 20%;
+    width: 100%;
+}
 .answers_area
 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: auto;
+    display: flex;
+    flex-direction: column;
 }
 .answers_area>div
 {
-    padding: 15px;
+    padding: 5%;
     margin: 5px;
     border: 1px solid #BBB;
     height: auto;
@@ -24,7 +44,7 @@
 }
 .question_area
 {
-    background-color: white; height: auto; 
+    background-color: white; height: auto;
 }
 .question
 {
@@ -32,7 +52,7 @@
 }
 img
 {
-    height: 100%;
+    height: 100px;
 }
 p
 {
@@ -45,11 +65,12 @@ p
 .number_question
 {
     position: sticky;
-    top: 10px;
+    left:100vh;
+    top:2%;
     background-color: white;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    height: 450px;
+    grid-template-columns: 1fr 1fr;
+    height: 95vh;
     margin-left: 10px;
     overflow-y: auto;
 }
@@ -65,9 +86,16 @@ p
 .link_question>div
 {
     color: black;
+    font-size: 14px;
 }
 hr
 {
     width: 85%;
     height: 2px;
+}
+.answers_area img
+{
+    width: 100%;
+    height: auto;
+}
 }
