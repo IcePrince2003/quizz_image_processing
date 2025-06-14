@@ -21,7 +21,8 @@ for(var i = 0; i<answer_area.length; i++)
 window.onload = function()
 {
     user_answer = JSON.parse(localStorage.getItem("user_answer"))||[];
-    if(user_answer !=null)
+    let has_answer = user_answer.some(answer=>answer!=null);
+    if(has_answer)
     {
         let cf = confirm("Bạn có muốn tiếp tục làm bài không?");
         if(cf)
@@ -38,7 +39,8 @@ window.onload = function()
         }
         else
         {
-            user_answer = new Array(221);
+            user_answer = new Array(221).fill(null);
+            localStorage.setItem("user_answer", JSON.stringify(user_answer));
         }
     }
 }
